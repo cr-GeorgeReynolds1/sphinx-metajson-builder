@@ -1,5 +1,6 @@
-""" Sphinx extension to build json files with an additional
-`toctree` key containing a full toctree (similar to RTD html theme).
+""" Sphinx extension to build json files with an additional metadata
+as structured JSON objects as well as a `toctree` key containing a 
+full toctree (similar to RTD html theme).
 """
 
 from setuptools import setup, find_packages
@@ -16,16 +17,16 @@ CLASSIFIERS = [
 
 def run_setup():
     setup(
-        name='sphinxcontrib-jsontoc',
+        name='sphinxcontrib-metajson',
         version=VERSION,
         description=DOCLINES[0],
         long_description="\n".join(DOCLINES[2:]),
         classifiers=CLASSIFIERS,
-        author='Hank Anderson',
-        author_email='hank@statease.com',
+        author='George Reynolds',
+        author_email='george.reynolds@cybereason.com',
         license='apache',
-        url='https://github.com/statease/sphinxcontrib-jsontocbuilder',
-        download_url = 'https://github.com/statease/sphinxcontrib-jsontocbuilder/releases',
+        url='https://github.com/cr-GeorgeReynolds1/sphinx-metajson-builder.git',
+        download_url = 'https://github.com/cr-GeorgeReynolds1/sphinx-metajson-builder.git/releases',
         packages=find_packages(),
         include_package_data=True,
         zip_safe=False,

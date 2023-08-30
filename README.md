@@ -1,17 +1,20 @@
-# json-toc-builder
+# json-meta-builder
 
-Builder for sphinx that adds a "toctree" key to the json output with the
-full toctree.
+Sphinx extension to build json files with an additional metadata
+as structured JSON objects as well as a 'toctree' key containing a 
+full toctree (similar to RTD html theme).
 
 ## Usage
 
 Set the builder as a extension in `conf.py`:
 
-    extensions = ['sphinxcontrib.jsontoc']
+    extensions = ['sphinxcontrib.metajson']
 
-Run sphinx-build with target `jsontoc`:
+Run sphinx-build with target `metajson`:
 
-    sphinx-build -b jsontoc -c . build/jsontoc
+    sphinx-build -b metajson -c . build/metajson
 
-There is now a `toctree` key in every fjson file with the top level
-toctree (as opposed to the `toc` key which only has the current level).
+There is now a structured JSON object in the meta field containing all
+the metadata information as well as a`toctree` key in every fjson file 
+with the top level toctree (as opposed to the `toc` key which only has
+ the current level).
