@@ -14,7 +14,7 @@ class JSONMETAHTMLBuilder(JSONHTMLBuilder):
         toctree = self.render_partial(self_toctree)['fragment']
         out_dict['fulltoc'] = toctree
         out_dict['fullmeta'] = json.dumps(self.env.metadata)
-        out_dict['docmeta'] = json.dumps(self.env.metadata.get(docname))
+        out_dict['docmetatags'] = json.dumps(metatags)
         out_dict['dockey'] = docname
         return out_dict
  
